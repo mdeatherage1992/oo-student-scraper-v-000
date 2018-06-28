@@ -7,7 +7,7 @@ class Student
 
   def initialize(student_hash)
     student_hash.each do |key,value|
-      self.send(key,value)
+      self.send('key=',value)
   end
   @@all << self
 end
@@ -21,7 +21,7 @@ end
   def add_student_attributes(attributes_hash)
     attributes_hash.each do |attribute,value|
       binding.pry
-      self.send(key,value)
+      self.send('key=',value)
   end
   self
 end

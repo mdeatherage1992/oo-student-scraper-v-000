@@ -6,7 +6,7 @@ class Student
 
   def initialize(student_hash)
     student_hash.each do |platform,value|
-      self.send('#{platform}=',value)
+      self.send('#{platform}',value)
   end
   @@all << self
 end
@@ -19,7 +19,7 @@ end
 
   def add_student_attributes(attributes_hash)
     attributes_hash.each do |attribute,value|
-      self.send('#{attribute}=',value)
+      self.send('#{attribute}s',value)
   end
   self
 end
